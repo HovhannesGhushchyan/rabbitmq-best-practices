@@ -292,10 +292,11 @@ async function publishToRabbitMQWithRequeue(queue, message) {
         console.error('Message stored for requeue:', err.message);
     }
 }
-```
 
 // Call this function after reconnecting to RabbitMQ
 rabbitConn.on('reconnect', requeueMessages);
+```
+
 5. Final Example Workflow
 The full flow looks like:
 
